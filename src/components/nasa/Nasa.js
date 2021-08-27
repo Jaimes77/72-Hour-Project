@@ -1,4 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { ReactDOM } from "react-dom";
+
+const divStyle = {
+  backgroundColor: '#5AB9EA',
+  textAlign: 'center',
+  color: '#C1C8E4',
+  padding: '20px',
+  margin: '20px',
+  marginBottom: '50px',
+  borderRadius: '50px'
+};
 
 const Nasa = (props) => {
   const [latitude, setLatitude] = useState(37.566536);
@@ -20,11 +31,16 @@ const Nasa = (props) => {
   }, []);
 
   return (
-    <div className="">
-      <div className="">
+    <div className="" style={divStyle} >
         <h1 id="">NASA photo</h1>
+      <div className="" style={{ color: '#d9e3f0', textAlign: 'center' }}>
         <h2>This is a NASA image based on your current location!</h2>
-          <img src={ nasaPhoto } />        
+          <img 
+            className='nasa-photo' 
+            alt='earth photo' 
+            width='350px' 
+            height='350px' 
+            src={ nasaPhoto } />        
       </div>
     </div>
   );
