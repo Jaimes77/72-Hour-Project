@@ -3,7 +3,7 @@ const Weather = (props) => {
   return (
     <div>
       Hello from Weather
-      <H1>Leslie</H1>
+      <h1>Leslie</h1>
     </div>
   );
 };
