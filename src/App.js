@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Nasa from "./components/nasa/Nasa";
-import Ticketmaster from "./components/ticketmaster/Ticketmaster";
+import TicketmasterParent from "./components/Ticketmaster/TicketmasterParent";
 import Weather from "./components/weather/Weather";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
     fetch(geoURL)
       .then((res) => res.json())
       .then((data) => {
-        setCity(data.city);
+        setCity(data.locality);
         setLat(data.latitude);
         setLong(data.longitude);
       });
@@ -38,7 +38,7 @@ function App() {
       {/* <Ticketmaster /> */}
       {/* Hello */}
       <Nasa />
-      <Ticketmaster />
+      <TicketmasterParent />
     </div>
   );
 }
