@@ -1,10 +1,6 @@
-.weatherbackground {
-  border: black 2px solid;
-  margin-top: 55px;
-  margin-left: 175px;
-  margin-right: 175px;
-  padding-left: 50px;
-  padding-bottom: 25px;
+body {
+  background-color: #7c8393;
+  /* padding: 60px; */
 }
 
 .temp-icon {
@@ -12,18 +8,90 @@
 }
 
 .text {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: larger;
+  font-family: "Comfortaa", cursive;
+  font-size: 25px;
 }
 
 .button {
   margin-left: 39%;
-}
-
-Card {
-  padding: "10px";
+  font-family: "Comfortaa", cursive;
+  font-size: 18px !important;
+  font-weight: bold !important;
 }
 
 .cardText {
+  font-family: "Comfortaa", cursive;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nasa {
+  border: 1px solid#d3d3d3;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 60px;
+  width: 50vw;
+  margin-left: 25%;
+  font: black;
+  background-color: white;
+  border-radius: 0.5%;
+}
+
+.eventstext {
+  font-family: "Comfortaa", cursive;
+  font-size: 25px;
+}
+.nasatext {
+  font-family: "Comfortaa", cursive;
+  font-size: 25px;
+}
+
+.Leslie {
+  height: 275px;
+  /* width: 200px; */
+}
+
+.header {
+  /* border: 2px solid red; */
+  /* font-weight: 500 !important; */
+  font-family: "Yesteryear", cursive;
+  font-size: 65px;
+  font-weight: 500px;
+}
+
+.team {
+  height: auto;
+  width: 1280px;
+
+  border: 1px solid#d3d3d3;
+  padding-top: 15px;
+  margin-left: 25%;
+  margin-top: 70px;
+  margin-right: 25%;
+  text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* margin: 60px; */
+  background-color: white;
+  /* padding-bottom: 60px; */
+  border-radius: 0.5%;
+}
+
+.nasaimage {
+  border: 1px solid#d3d3d3;
+  margin-bottom: 35px;
+}
+
+.background {
+  background-color: #7c8393;
+  padding: 60px;
+}
+
+.eventsdiv {
+  background-color: white;
+  border-radius: 0.5%;
+}
+
+#weatherdiv {
+  margin-left: 25% !important;
+  margin-right: 50% !important;
 }
