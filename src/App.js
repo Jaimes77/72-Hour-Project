@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Nasa from "./components/nasa/Nasa";
+import Team from "./components/team/Team";
 import TicketmasterParent from "./components/Ticketmaster/TicketmasterParent";
 import Weather from "./components/weather/Weather";
 
@@ -20,6 +21,8 @@ function App() {
         setCity(data.locality);
         setLat(data.latitude);
         setLong(data.longitude);
+        // console.log(latitude);
+        // console.log(longitude);
       });
   };
 
@@ -32,13 +35,14 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {/* <Nasa /> */}
+    <div className="background">
       {city.length > 0 ? <Weather city={city} /> : "Loading"}
-      {/* <Ticketmaster /> */}
-      {/* Hello */}
-      <Nasa />
-      <TicketmasterParent />
+
+      {lat && long ? <Nasa lat={lat} long={long} /> : "Loading"}
+
+      {lat && long ? <TicketmasterParent lat={lat} long={long} /> : "Loading"}
+
+      <Team />
     </div>
   );
 }

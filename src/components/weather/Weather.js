@@ -13,6 +13,9 @@ const Weather = (props) => {
   let fetchURL = async () => {
     let response = await fetch(url);
     let data = await response.json();
+    // setCelsius(5);
+    // setFahrenheit(5);
+    console.log(data);
     setCelsius((data.main.temp - 273.15).toFixed(0));
     setFahrenheit(((data.main.temp - 273.15) * 1.8 + 32).toFixed(0));
   };
@@ -30,7 +33,11 @@ const Weather = (props) => {
   };
 
   return (
-    <div className="card mt-3 mx-auto" style={{ width: "50vw" }}>
+    <div
+      className="card mt-3 mx-auto"
+      id="weatherdiv"
+      style={{ width: "50vw" }}
+    >
       <div class="card-body text-center">
         <h1>Weather </h1>
         <img
@@ -65,8 +72,8 @@ const Weather = (props) => {
         <div className="row mt-4">
           <p className="text">
             The temperature in your city is <strong>{ctf}°</strong>
-            <strong>{temperature}</strong>. Click the below button to change the
-            temperature to
+            <strong>{temperature}</strong>. <br></br> Click the below button to
+            change the temperature to
             <strong>{changeTemperature}</strong>
           </p>
           <Button

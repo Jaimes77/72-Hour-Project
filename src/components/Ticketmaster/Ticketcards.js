@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardBody, CardImg, CardTitle, CardText, Col } from "reactstrap";
 
 const Ticketcards = (props) => {
-  console.log(props.activity);
+  // console.log(props.activity);
   return (
     <div>
       <Col>
@@ -15,7 +15,7 @@ const Ticketcards = (props) => {
           <CardImg
             top
             width="100%"
-            height="175px"
+            height="200px"
             src={props.activity.images[0].url}
             alt="Card image cap"
           />
