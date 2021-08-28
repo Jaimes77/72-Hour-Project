@@ -1,16 +1,33 @@
 import React from "react";
-import { CardBody, CardTitle, CardText, Col } from "reactstrap";
+import { Card, CardBody, CardImg, CardTitle, CardText, Col } from "reactstrap";
 
 const Ticketcards = (props) => {
+  console.log(props.activity);
   return (
     <div>
       <Col>
-        <CardBody style={{ border: "1px black solid" }}>
-          <CardTitle tag="h5" style={{ color: "green" }}>
-            Event
-          </CardTitle>
-          <CardText style={{ color: "red" }}>{props.activity.name}</CardText>
-        </CardBody>
+        <Card
+          style={{
+            // border: "5px black solid",
+            margin: "5px",
+          }}
+        >
+          <CardImg
+            top
+            width="100%"
+            height="175px"
+            src={props.activity.images[0].url}
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardText
+              className="cardText"
+              style={{ color: "black", textAlign: "center" }}
+            >
+              {props.activity.name}
+            </CardText>
+          </CardBody>
+        </Card>
       </Col>
     </div>
   );
