@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { ReactDOM } from "react-dom";
 
 const divStyle = {
-  backgroundColor: '#5AB9EA',
+  backgroundColor: '#356B6C',
+  borderColor: 'CFA59D',
+  fontFamily: 'Calibri',
   textAlign: 'center',
-  color: '#C1C8E4',
+  color: '#EAE7E4',
   padding: '20px',
   margin: '20px',
   marginBottom: '50px',
-  borderRadius: '50px'
+  borderRadius: '20px'
 };
 
 const Nasa = (props) => {
-  const [latitude, setLatitude] = useState(37.566536);
-  const [longitude, setLongitude] = useState(126.977966);
-  const [ nasaPhoto, setNasaPhoto ] = useState('');  
+  const [ latitude, setLatitude ] = useState(39.768402);
+  const [ longitude, setLongitude ] = useState(-86.158066);
+  const [ nasaPhoto, setNasaPhoto ] = useState('');
   
   const baseURL = 'https://api.nasa.gov/planetary/earth/assets';
   const key = 'KYqTtPHmCW4ZDAMpTrGagz9eJfHNOxDe900Dffco';
@@ -31,12 +32,11 @@ const Nasa = (props) => {
   }, []);
 
   return (
-    <div className="" style={divStyle} >
+    <div style={divStyle} >
         <h1 id="">NASA photo</h1>
-      <div className="" style={{ color: '#d9e3f0', textAlign: 'center' }}>
+      <div style={{ color: '#d9e3f0', textAlign: 'center' }}>
         <h2>This is a NASA image based on your current location!</h2>
-          <img 
-            className='nasa-photo' 
+          <img              
             alt='earth photo' 
             width='350px' 
             height='350px' 
