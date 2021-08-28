@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Nasa from "./components/nasa/Nasa";
 import Ticketmaster from "./components/ticketmaster/Ticketmaster";
@@ -27,13 +27,18 @@ function App() {
     console.log("unable to find location");
   };
 
-  navigator.geolocation.getCurrentPosition(success, error);
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(success, error);
+  }, []);
 
   return (
     <div>
       {/* <Nasa /> */}
       {city.length > 0 ? <Weather city={city} /> : "Loading"}
       {/* <Ticketmaster /> */}
+      {/* Hello */}
+      <Nasa />
+      <Ticketmaster />
     </div>
   );
 }
